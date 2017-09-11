@@ -1,4 +1,4 @@
-# TRABALHO 01 : Título do trabalho
+# TRABALHO 01 : ExpoApp
 Trabalho desenvolvido durante a disciplina de BD
 
     O referido projeto poderá ser:
@@ -27,18 +27,21 @@ DICA:
 # Sumário
 
 ### 1	COMPONENTES<br>
-Integrantes do grupo<br>
+Thalles Vargas Ribeiro Lopes: tvrl07031997@gmail.com<br>
+Yago Henrique Zanon Trarbach: yagozt.henrique@gmail.com
 
 ### 2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
+O Aplicativo ExpoApp visa auxiliar na divulgação de exposições de empresas e ajudar os clientes visitantes daquela exposição, promovendo trocas de informações entre usuários sempre disponibilizando as informações sobre as peças que nela estão expostas, o que e como os visitantes avaliaram uma determinada exposição e suas peças, incentivando as visitas e a e melhorando a divulgação. <br>
       
 ### 3	MINI-MUNDO<br>
-Descrever o mini-mundo. Não deve ser maior do que 30 linhas <br>
+O ExpoApp é um aplicativo voltado para divulgação e disponibilidade de informações para pessoas e empresas interessadas nas visitas a exposições, as peças que possuem e todas as suas informações. A utilização da aplicação é totalmente feita via aplicativo de celular.<br><br>
+Na visão do cliente, ao abrir a aplicação pela primeira vez, o usuário terá a opção de fazer cadastro no sistema (podendo cadastrar diretamente sua conta do facebook) ou fazer login diretamente. Caso não seja cadastrado, irá para a página de cadastro onde fornecerá os seus dados, que são seu nome completo, email e data de nascimento. O cliente já cadastrado, ao fazer o login, terá acesso ao seu perfil onde poderá escolher uma foto de perfil, escrever uma bio, verificar as notificações das empresas que ele "segue", procurar as exposições mais próximas vendo a rota para chegar e ver a lista com todos as empresas cadastradas no sistema. Cada empresa terá uma avaliação de 0 a 5, descrição do mesmo, fotos da empresa e comentários que também podem ser avaliados, se ele foi útil ou não, sendo assim o usuário poderá ordenar pelos comentários mais bem avaliados ou mais recentes.<br>
+<br>
+Caso já esteja em uma exposição poderá fazer uma avaliação das peças disponíveis e fazer uma busca de obras para verificar suas informações via uma lista disponível onde mostrará o código e nome de cada obra ou através da utilização de QR Code expondo os dados da obra informada.<br>
+<br>
+Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome, localização, se é gratuito a visita ou não, valor para a visita, dias de funcionamento e criar a senha da conta. Após o cadastro da empresa terá a opção de criar eventos, fixos ou temporários onde será feito o cadastro das peças que notificam os seguidores após a criação. Poderá visualizar os comentários e avaliações feitas pelos clientes sobre a empresa, qual obra teve mais visualizações e os comentários feito sobre a obra, escrever e editar as informações sobre a empresa e editar as informações de cadastro. <br>
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/balsamiq.png?raw=true "Title")
 
