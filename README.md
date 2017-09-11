@@ -44,7 +44,7 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/AppEventos.pdf "ExpoAppBalsamiq")
+![ExpoAppBalsamiq](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/AppEventos.pdf "ExpoAppBalsamiq")
 
 
 ### 5	MODELO CONCEITUAL<br>
