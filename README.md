@@ -64,29 +64,30 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
-CLIENTE: Tabela que armazena as informações relativas ao usuário em geral da aplicação.
-NOME: Campo que armazena o nome de cada usuário cadastrado.
-SEXO: Campo que armazena o sexo de cada usuário cadastrado.
-CPF: Campo que armazena o número de CPF para cada usuário cadastrado.
-Data_Nasc: Campo que armazena a data de nascimento do usuário cadastrado.
--
-EMPRESA: Tabela que armazena as informações de cada empresa cadastrada.
-NOME: Campo que armazena o nome de cada empresa cadastrada.
-CNPJ: Campo que armazena o CNPJ de cada empresa cadastrada.
-CEP: Campo que armazena o CEP de cada empresa cadastrada.
-LOGRADOURO: Campo que armazena o endereço de cada empresa cadastrada. 
-SOBRE: Campo que armazena as informações sobre cada empresa cadastrada.
-DT_CADASTRO: Campo que armazena a data do cadastro de cada empresa.
-ID_BAIRRO: Campo que armazena o ID do bairro da empresa em questão.
--
-BAIRRO: Tabela que armazena as informações dos bairros das empresas cadastradas.
-Nome: Campo que armazena o nome do bairro da empresa cadastrada.
--
-CIDADE: Tabela que armazena as informações das cidades das empresas cadastradas.
-NOME: Campo que armazena o nome da cidade da empresa cadastrada.
--
-ESTADO: Tabela que armazena as informações dos estados das empresas cadastradas.
-NOME: Campo que armazena o nome do estado da empresa cadastrada.
+    CLIENTE: Tabela que armazena as informações relativas ao usuário em geral da aplicação.
+    NOME: Campo que armazena o nome de cada usuário cadastrado.
+    SEXO: Campo que armazena o sexo de cada usuário cadastrado.
+    CPF: Campo que armazena o número de CPF para cada usuário cadastrado.
+    Data_Nasc: Campo que armazena a data de nascimento do usuário cadastrado.
+    -
+    EMPRESA: Tabela que armazena as informações de cada empresa cadastrada.
+    NOME: Campo que armazena o nome de cada empresa cadastrada.
+    CNPJ: Campo que armazena o CNPJ de cada empresa cadastrada.
+    CEP: Campo que armazena o CEP de cada empresa cadastrada.
+    LOGRADOURO: Campo que armazena o endereço de cada empresa cadastrada. 
+    SOBRE: Campo que armazena as informações sobre cada empresa cadastrada.
+    DT_CADASTRO: Campo que armazena a data do cadastro de cada empresa.
+    ID_BAIRRO: Campo que armazena o ID do bairro da empresa em questão.
+    -
+    BAIRRO: Tabela que armazena as informações dos bairros das empresas cadastradas.
+    Nome: Campo que armazena o nome do bairro da empresa cadastrada.
+    -
+    CIDADE: Tabela que armazena as informações das cidades das empresas cadastradas.
+    NOME: Campo que armazena o nome da cidade da empresa cadastrada.
+    -
+    ESTADO: Tabela que armazena as informações dos estados das empresas cadastradas.
+    NOME: Campo que armazena o nome do estado da empresa cadastrada.
+
 ### 6	MODELO LÓGICO<br>
 ### 7	MODELO FÍSICO<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
