@@ -66,10 +66,14 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
     CLIENTE: Tabela que armazena as informações relativas ao usuário em geral da aplicação.
+    LOGIN: Campo que armazena o login de cada cliente cadastrado. 
+    SENHA: Campo que armazena a senha de cada cliene cadastrado.
+    TIPO: Campo que armazena para cada usuário se ele é visitante ou empresa. 
     NOME: Campo que armazena o nome de cada usuário cadastrado.
     SEXO: Campo que armazena o sexo de cada usuário cadastrado.
     CPF: Campo que armazena o número de CPF para cada usuário cadastrado.
     Data_Nasc: Campo que armazena a data de nascimento do usuário cadastrado.
+    
     -
     EMPRESA: Tabela que armazena as informações de cada empresa cadastrada.
     NOME: Campo que armazena o nome de cada empresa cadastrada.
@@ -81,14 +85,55 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
     ID_BAIRRO: Campo que armazena o ID do bairro da empresa em questão.
     -
     BAIRRO: Tabela que armazena as informações dos bairros das empresas cadastradas.
-    Nome: Campo que armazena o nome do bairro da empresa cadastrada.
+    NOME: Campo que armazena o nome do bairro da empresa cadastrada.
     -
     CIDADE: Tabela que armazena as informações das cidades das empresas cadastradas.
     NOME: Campo que armazena o nome da cidade da empresa cadastrada.
     -
     ESTADO: Tabela que armazena as informações dos estados das empresas cadastradas.
     NOME: Campo que armazena o nome do estado da empresa cadastrada.
-
+    -
+    COMENTÁRIO: Tabela que armazena as informações dos comentários dos usuários cadastrados.
+    DESCRICAÇÃO: Campo que armazena o comentário de cada usuário cadastrado.
+    DATA_CADASTRO: Campo que armazena a data do comentário feito por cada usuário cadastrado.
+    NOTA: Campo que armazena a nota dada pelo usuário cadastrado. 
+    TIPO: Campo que armazena se o comentário feito por cada usuário cadastrado é comentário ou respota a um comentário.
+    -
+    EMPRESA: Tabela que armazena as informações de cada empresa cadastrada.
+    LOGIN: Campo que armazena o login de cada empresa cadastrado. 
+    SENHA: Campo que armazena a senha de cada empresa cadastrado.
+    TIPO: Campo que armazena para cada usuário se ele é visitante ou empresa. 
+    NOME: Campo que armazena o nome de cada empresa cadastrado.
+    DT_CADASTRO: Campo que armazena a data em que cada empresa foi cadastrada.
+    SOBRE: Campo que armazena um texto que descreve cada empresa cadastrada.
+    LOGRADOURO: Campo que armazena o logradouro de cada empresa cadastrada.
+    CEP: Campo que armazena o CEP de cada empresa cadastrada. 
+    -
+    EXPOSIÇÃO: Tabela que armazena as informações de cada exposição cadastrada.
+    DESCRIÇÃO: Campo que armazena a descrição de cada exposição cadastrada.
+    DT_INICIO: Campo que armazena a data de inicio de cada exposição cadastrada.
+    HR_INICIO: Campo que armazena a hora de início de cada exposição cadastrada.
+    HR_FINAL: Campo que armazena a hora de fechamento de cada exposição cadastrada.
+    EXPOSIÇÃO_TIPO: Campo que armazena o tipo de cada exposição cadastrada, se é fixa ou temporária.
+    LOGRADOURO: Campo que armazena o logradouro de cada exposição cadastrada.
+    
+    EXPOSIÇÃO TEMPORÁRIA: Tabela que armazena as informações de cada exposição cadastrada.
+    DESCRIÇÃO: Campo que armazena a descrição de cada exposição cadastrada.
+    DT_INICIO: Campo que armazena a data de inicio de cada exposição cadastrada.
+    DT_FIM : Campo que armazena a data de fechamento de cada exposição cadastrada.
+    HR_INICIO: Campo que armazena a hora de início de cada exposição cadastrada.
+    HR_FINAL: Campo que armazena a hora de fechamento de cada exposição cadastrada.
+    EXPOSIÇÃO_TIPO: Campo que armazena o tipo de cada exposição cadastrada, se é fixa ou temporária.
+    LOGRADOURO: Campo que armazena o logradouro de cada exposição cadastrada.
+    
+    NOTIFICAÇÕES: Tabela que armazena as informações de cada notificação criada.
+    DESCRIÇÃO: Campo que armazena a descrição de cada notificação.
+    TIPO_ORIGEM: Tabela que armazena o tipo da origem de cada notificação criada, se é de empresa ou da exposição
+    
+    RESPOSTA: Tabela que armazena as informações de cada resposta criada.
+    CURTIDA: Campo que armazena se a pessoa que respondeu o comentário achou útil ou não;
+    DESCRIÇÃO: Campo que armazena a descrição de cada resposta. 
+    
 ### 6	MODELO LÓGICO<br>
 ### 7	MODELO FÍSICO<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
