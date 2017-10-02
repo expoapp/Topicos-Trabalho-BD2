@@ -134,8 +134,9 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAppLogico.png?raw=true "Modelo Lógico")<br>
 ### 7	MODELO FÍSICO<br>
-![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/CreateExpoApp.sql "Modelo Físico")<br>
+![Modelo Físico](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/CreateExpoApp.sql "Modelo Físico")<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+![Insert aplicado nas tabelas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Inserts.sql "Inserts")<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a:
