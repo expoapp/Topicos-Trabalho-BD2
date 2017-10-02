@@ -35,13 +35,11 @@ Yago Henrique Zanon Trarbach: yagozt.henrique@gmail.com
 O Aplicativo ExpoApp visa auxiliar na divulgação de exposições de empresas e ajudar os clientes visitantes daquela exposição, promovendo trocas de informações entre usuários sempre disponibilizando as informações sobre as peças que nela estão expostas, o que e como os visitantes avaliaram uma determinada exposição e suas peças, incentivando as visitas e a e melhorando a divulgação.<br>
       
 ### 3	MINI-MUNDO<br>
-O ExpoApp é um aplicativo voltado para divulgação e disponibilidade de informações para pessoas e empresas interessadas nas visitas a exposições, as peças que possuem e todas as suas informações. A utilização da aplicação é totalmente feita via aplicativo de celular.<br>
-
-Na visão do cliente, ao abrir a aplicação pela primeira vez, o usuário terá a opção de fazer cadastro no sistema (podendo cadastrar diretamente sua conta do facebook) ou fazer login diretamente. Caso não seja cadastrado, irá para a página de cadastro onde fornecerá os seus dados, que são seu nome completo, email, CPF,sua localização e data de nascimento. O cliente já cadastrado, ao fazer o login, terá acesso ao seu perfil onde poderá escolher uma foto de perfil, escrever uma bio, verificar as notificações das empresas que ele "segue", procurar as exposições mais próximas vendo a rota para chegar e ver a lista com todos as empresas cadastradas no sistema. Cada exposiçã terá uma avaliação de 0 a 5, descrição da mesmo e comentários que também podem ser avaliados ao serem respondidos, sendo assim o usuário poderá ordenar pelos comentários mais bem avaliados ou mais recentes.<br>
-
-Caso já esteja em uma exposição poderá fazer uma avaliação das peças disponíveis e fazer uma busca de obras para verificar suas informações via uma lista disponível onde mostrará o código e nome de cada obra ou através da utilização de QR Code expondo os dados da obra informada.<br>
-
-Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome, localização e criar a senha da conta. Após o cadastro da empresa terá a opção de criar eventos, fixos ou temporários onde será feito o cadastro das peças que notificam os seguidores após a criação, poderá visualizar os comentários e avaliações feitas pelos clientes sobre as suas exposições, qual obra teve mais visualizações e os comentários feito sobre a obra, escrever e editar as informações.<br>
+O ExpoApp é um aplicativo voltado para divulgação e disponibilidade de informações para pessoas interessadas nas visitas a exposições de empresas, onde serão expostas as peças, além de todas as suas informações. A utilização da aplicação é totalmente feita via aplicativo de celular.<br>
+Na visão do cliente, ao abrir a aplicação pela primeira vez, o usuário terá a opção de fazer cadastro no sistema (podendo cadastrar diretamente sua conta do facebook) ou fazer login diretamente. Caso não seja cadastrado, irá para a página de cadastro onde fornecerá os seus dados, que são seu nome completo, email e data de nascimento, CPF e localização. O cliente já cadastrado, ao fazer o login, terá acesso ao seu perfil onde poderá escolher uma foto de perfil, escrever uma biografia, verificar as notificações das empresas que ele "segue", procurar as exposições mais próximas vendo a rota para chegar, a lista com todos as empresas cadastradas no sistema. Cada empresa terá uma avaliação de 0 a 5 que é a média das avaliações de suas exposições, podendo também fazer comentários sobre as peças ou a exposição, além de ter a opção de “responder” o comentário de outro usuário, bem como,  marcando se ele foi útil ou não. Sendo assim, o usuário poderá ordenar pelos comentários mais bem avaliados ou mais recentes.<br>
+O Cliente pode também verificar as peças que se encontram em uma exposição e obter as informações sobre a mesma, podendo fazer uma avaliação que conterá uma descrição e uma nota. Para ler as informações sobre as peças também terá disponível, na apresentação da peça, um QR Code onde após o cliente aproximar o aplicativo e ler o código, carregará todas as informações correspondentes.<br>
+Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome, localização e criar a senha da conta. Após o cadastro da empresa terá a opção de criar eventos, fixos ou temporários que notificam os seguidores após a criação, ao editar a exposição já criada terá a opção de adicionar peças as obras, onde vai preencher todas as suas informações e adicionar fotos a ela. Poderá visualizar os comentários e avaliações feitas pelos clientes sobre as suas exposições, qual obra teve mais visualizações e os comentários feitos sobre as obras, escrever e editar as informações sobre a empresa.
+<br>
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
@@ -49,11 +47,10 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 
 
 ### 5	MODELO CONCEITUAL<br>
-![Modelo Conceitual](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/CONCEITUAL.png "Modelo Conceitual")
+![Modelo Conceitual](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAPP.png "Modelo Conceitual")
 #### 5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
-    
-     5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
+![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAPP.png?raw=true "Modelo Conceitual")
+
 
 #### 5.3 DECISÕES DE PROJETO
     [atributo]: [descrição da decisão]
@@ -135,7 +132,9 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
     DESCRIÇÃO: Campo que armazena a descrição de cada resposta. 
     
 ### 6	MODELO LÓGICO<br>
+![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAppLogico.png?raw=true "Modelo Conceitual")<br>
 ### 7	MODELO FÍSICO<br>
+
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
