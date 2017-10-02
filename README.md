@@ -148,6 +148,7 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
+![SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Create_Inserts.sql?raw=true)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
