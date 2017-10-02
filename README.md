@@ -132,9 +132,9 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
     DESCRIÇÃO: Campo que armazena a descrição de cada resposta. 
     
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAppLogico.png?raw=true "Modelo Conceitual")<br>
+![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAppLogico.png?raw=true "Modelo Lógico")<br>
 ### 7	MODELO FÍSICO<br>
-
+![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/CreateExpoApp.sql "Modelo Físico")<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
