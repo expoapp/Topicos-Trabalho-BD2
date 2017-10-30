@@ -183,11 +183,13 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         
         
         [TRIGGER RESPONSÁVEL POR VERIFICAR SE O EMAIL DO USUÁRIO É VÁLIDO OU NÃO]
+        
         CREATE FUNCTION checkValidadeEmail() RETURN TRIGGER AS '
         BEGIN
         IF EXISTS (SELECT 
                          FROM USUARIO
-                         WHERE email LIKE '%@%'			
+                         WHERE email LIKE '%@%'
+                         AND email LIKE '%.com' OR email LIKE '%.com.br'
                    ) THEN 
             RAISE EXCEPTION "Erro: Email inválido";
         END IF;
@@ -201,6 +203,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         AFTER INSERT OR UPDATE OF email ON USUARIO
         FOR EACH ROW 
         EXECUTE PROCEDURE checkValidadeEmail();
+        
 <br>
 
 #### 9.5	Administração do banco de dados<br>
