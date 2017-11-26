@@ -128,7 +128,7 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
     LOGRADOURO: Campo que armazena o logradouro de cada exposição cadastrada.
     
     NOTIFICAÇÕES: Tabela que armazena as informações de cada notificação criada.
-    DESCRIÇÃO: Campo que armazena a descrição de cada notificação.
+     DESCRIÇÃO: Campo que armazena a descrição de cada notificação.
     TIPO_ORIGEM: Tabela que armazena o tipo da origem de cada notificação criada, se é de empresa ou da exposição
     
     RESPOSTA: Tabela que armazena as informações de cada resposta criada.
@@ -173,14 +173,22 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         destas características)
     Data de Entrega: (Data a ser definida)
 <br>
-select * from empresa_qtd_seguidores<br>
-![Empresa seguidores](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/empresa_qtd_seguidores.PNG)<br>
-select * from cidade_qtd_empresas<br>
-![Cidade empresas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/cidade_qtd_empresas.PNG)<br>
-select * from historico_notificao_empresa<br>
-![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/historico_notificao_empresa.PNG)<br>
-select * from notificacao_exposicao_cliente<br>
+select * from empresa_qtd_seguidores <br>
+
+![Empresa seguidores](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/empresa_qtd_seguidores.PNG) <br>
+
+select * from cidade_qtd_empresas <br>
+
+![Cidade empresas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/cidade_qtd_empresas.PNG) <br>
+
+select * from historico_notificao_empresa <br>
+
+![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/historico_notificao_empresa.PNG) <br>
+
+select * from notificacao_exposicao_cliente <br>
+
 ![Notificacao exposicao cliente](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/notificacao_exposicao_cliente.PNG)
+
 <br>
 
 #### 9.4	LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
