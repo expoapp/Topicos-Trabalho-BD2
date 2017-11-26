@@ -172,6 +172,14 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
         destas características)
     Data de Entrega: (Data a ser definida)
+select * from empresa_qtd_seguidores
+![Empresa seguidores](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/empresa_qtd_seguidores.PNG)
+select * from cidade_qtd_empresas
+![Cidade empresas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/cidade_qtd_empresas.PNG)
+select * from historico_notificao_empresa
+![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/historico_notificao_empresa.PNG)
+select * from notificacao_exposicao_cliente
+![Notificacao exposicao cliente](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/notificacao_exposicao_cliente.PNG)
 <br>
 
 #### 9.4	LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
