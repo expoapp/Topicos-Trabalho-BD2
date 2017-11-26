@@ -210,6 +210,8 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         Descrição detalhada sobre como serão executadas no banco de dados as <br>
         seguintes atividades.
         a) Segurança e autorização de acesso:
+            https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/ControleAcesso
+        Foi criado um grupo de adm onde possui todas as funcionalidades administrativas do banco de dados, e foi criado um grupo composto por dois analistas onde terão acesso somente a visualização (SELECT) a fim de consultar os dados. Qualquer nova criação de procedures, funcções, exclusão e atualização, terá que ser feito um pedido para o admin para ter um maior controle.
         b) Estimativas de aquisição de recursos para armazenamento e processamento da informação
         c) Planejamento de rotinas de manutenção e monitoramento do banco
         d) Plano com frequencia de análises visando otimização de performance
@@ -230,6 +232,7 @@ Data de Entrega: (Data a ser definida)
 
 #### 9.7	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
     a) Lista de índices, tipos de índices com explicação de porque foram implementados
+        ![https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Indeces.sql](Indices)
     b) Performance esperada VS Resultados obtidos
     c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
 <br>
