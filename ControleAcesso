@@ -1,0 +1,11 @@
+create user "yago.trarbach" PASSWORD '2213';
+
+create user "thalles" PASSWORD '1234';
+
+create ROLE adm with ADMIN postgres;
+
+create role analistas;
+
+GRANT ALL on all tables in SCHEMA public to adm;
+
+GRANT select on all tables in SCHEMA public to analistas;
