@@ -232,12 +232,12 @@ select * from notificacao_exposicao_cliente <br>
         --  
         -- Verifica tamanho da senha e cpf
         --      
-        IF NEW.LENGTH(senha) < 4 THEN
+        IF LENGHT(NEW.senha) < 4 THEN
             RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
         END IF;
 		
 		
-        IF NEW.LENGTH(cpf) <> 11 THEN
+        IF LENGTH(NEW.cpf) <> 11 THEN
             RAISE EXCEPTION 'CPF inválido';
         END IF;
     END;
