@@ -168,6 +168,52 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Bairro.PNG) <br>
 <br>
 
+    select * from cidade limit 10; <br>
+
+![Cidade Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Cidade.PNG) <br>
+    
+    
+    select * from bairro limit 10; <br>
+
+![Estado Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Estado.PNG) <br>
+<br>    
+    
+    select * from cliente limit 10; <br>
+
+![Cliente Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Cliente.PNG) <br>
+<br>    
+    
+    select * from comentario limit 10; <br>
+
+![Comentario Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Comentario.PNG) <br>
+<br>
+    
+    select * from empresa limit 10; <br>
+
+![Empresa Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Empresa.PNG) <br>
+<br>
+    
+    select * from exposicao limit 10; <br>
+
+![Exposicao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Exposicao.PNG) <br>
+<br>
+    
+    select * from exposicao_temp limit 10; <br>
+
+![Exposicao_temp Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Exposicao_temporaria.PNG) <br>
+<br>
+    
+    select * from notificacao limit 10; <br>
+
+![Notificacao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Notificacao.PNG) <br>
+<br>
+    
+    select * from peca limit 10; <br>
+
+![Peca Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Peca.PNG) <br>
+<br>
+
+
 #### 9.3	SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
         a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
         e necessidade ela contempla.
