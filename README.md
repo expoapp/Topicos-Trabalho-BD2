@@ -163,7 +163,9 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
 #### 9.2	SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
-    Data de Entrega: (Data a ser definida)
+    select * from empresa_qtd_seguidores <br>
+
+	(https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Bairro.PNG) <br>
 <br>
 
 #### 9.3	SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
