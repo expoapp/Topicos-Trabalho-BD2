@@ -205,12 +205,12 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
     
     select * from notificacao limit 10; <br>
 
-![Notificacao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Notificacao.PNG) <br>
+![Notificacao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Notificação.PNG) <br>
 <br>
     
     select * from peca limit 10; <br>
 
-![Peca Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Peca.PNG) <br>
+![Peca Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Peça.PNG) <br>
 <br>
 
 
