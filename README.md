@@ -199,28 +199,6 @@ select * from notificacao_exposicao_cliente <br>
         d) resultados em forma de tabela/imagem
         
         
-        [TRIGGER RESPONSÁVEL POR VERIFICAR SE O EMAIL DO USUÁRIO É VÁLIDO OU NÃO]
-        
-        CREATE FUNCTION checkValidadeEmail() RETURN TRIGGER AS '
-        BEGIN
-        IF EXISTS (SELECT 
-                         FROM USUARIO
-                         WHERE email LIKE '%@%'
-                         AND email LIKE '%.com' OR email LIKE '%.com.br'
-                   ) THEN 
-            RAISE EXCEPTION "Erro: Email inválido";
-        END IF;
-        RETURN NULL;
-        END 
-        '
-        LANGUAGE plpsql;
-
-
-        CREATE TRIGGER checkEmailTrigger 
-        AFTER INSERT OR UPDATE OF email ON USUARIO
-        FOR EACH ROW 
-        EXECUTE PROCEDURE checkValidadeEmail();
-        
 <br>
 
 #### 9.5	Administração do banco de dados<br>
