@@ -197,6 +197,15 @@ select * from notificacao_exposicao_cliente <br>
     b) Código do objeto (função/trigger/asserção)
     c) exemplo de dados para aplicação
     d) resultados em forma de tabela/imagem
+    
+    [TRIIGER PARA VALIDAR O EMAIL]
+    CREATE FUNCTION checkValidadeEmail() RETURN TRIGGER AS '
+	BEGIN
+		IF NEW.email NOT LIKE ‘%@%.%’ THEN
+			RAISE EXCEPTION 'Email inválido';
+		END IF;	
+	END;
+	' LANGUAGE plpsql;
 
     [TRIGGER PARA VALIDAR CADASTRO DE USUÁRIO]
     CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS '
