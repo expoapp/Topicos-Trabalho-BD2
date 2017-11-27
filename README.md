@@ -192,12 +192,50 @@ select * from notificacao_exposicao_cliente <br>
 <br>
 
 #### 9.4	LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
-        Detalhamento sobre funcionalidade de cada código.
-        a) Objetivo
-        b) Código do objeto (função/trigger/asserção)
-        c) exemplo de dados para aplicação
-        d) resultados em forma de tabela/imagem
-        
+    Detalhamento sobre funcionalidade de cada código.
+    a) Objetivo
+    b) Código do objeto (função/trigger/asserção)
+    c) exemplo de dados para aplicação
+    d) resultados em forma de tabela/imagem
+
+    [TRIGGER PARA VALIDAR CADASTRO DE USUÁRIO]
+    CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS '
+     BEGIN
+        -- Verificar se foi fornecido o login, senha, email, cpf, data_nascimento foram informados
+        IF NEW.login IS NULL THEN
+            RAISE EXCEPTION 'O login do usuário não pode ser nulo';
+        END IF;
+        IF NEW.senha IS NULL THEN
+            RAISE EXCEPTION 'A senha do usuário precisa ser preenchida';
+        END IF;
+		
+        IF NEW.cpf IS NULL THEN
+            RAISE EXCEPTION 'O cpf do usuário não pode ser nulo';
+        END IF;
+		
+        IF NEW.email IS NULL THEN
+            RAISE EXCEPTION 'O email do usuário não pode ser nulo';
+        END IF;
+		
+        IF NEW.dt_nascimento IS NULL THEN
+            RAISE EXCEPTION 'a data de nascimento do usuário não pode ser nulo';
+        END IF;
+        --  
+        -- Verifica tamanho da senha e cpf
+        --      
+        IF NEW.LENGTH(senha) < 4 THEN
+            RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
+        END IF;
+		
+		
+        IF NEW.LENGTH(cpf) <> 11 THEN
+            RAISE EXCEPTION 'CPF inválido';
+        END IF;
+    END;
+    ' LANGUAGE plpgsql;
+
+     CREATE TRIGGER empregados_gatilho BEFORE INSERT OR UPDATE ON usuario
+      FOR EACH ROW EXECUTE PROCEDURE valida_criacao_usuario();
         
 <br>
 
