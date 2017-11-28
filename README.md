@@ -253,7 +253,6 @@ select * from notificacao_exposicao_cliente <br>
     ' LANGUAGE SQL;	
     
     ////////////////////////////////////////////////////////////////////////
-    
     [FUNÇÃO CHAMADA QUANDO O USUÁRIO DESEJA EDITAR O COMENTÁRIO FEITO]
     
     CREATE OR REPLACE FUNCTION AlteraComentario(procura integer,nova_descricao varchar)
@@ -261,8 +260,7 @@ select * from notificacao_exposicao_cliente <br>
     update comentario set descricao = nova_descricao where id =procura;
     ' LANGUAGE SQL;	
     
-    ////////////////////////////////////////////////////////////////////////
-    
+    //////////////////////////////////////////////////////////////////////// 
     [FUNÇÃO CHAMADA QUE RETORNA  EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
    
     CREATE OR REPLACE FUNCTION CalculaNotaEmpresa(procura integer)
@@ -273,54 +271,55 @@ select * from notificacao_exposicao_cliente <br>
     END
     $$ LANGUAGE 'plpgsql';
 
-    
-    [TRIIGER PARA VALIDAR O EMAIL]
-    CREATE FUNCTION checkValidadeEmail() RETURN TRIGGER AS '
-	BEGIN
-		IF NEW.email NOT LIKE ‘%@%.%’ THEN
-			RAISE EXCEPTION 'Email inválido';
-		END IF;	
-	END;
-	' LANGUAGE plpsql;
 
+    /////////////////////////////////////////////////////////////////////////
     [TRIGGER PARA VALIDAR CADASTRO DE USUÁRIO]
-    CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS '
-     BEGIN
-        -- Verificar se foi fornecido o login, senha, email, cpf, data_nascimento foram informados
-        IF NEW.login IS NULL THEN
-            RAISE EXCEPTION 'O login do usuário não pode ser nulo';
-        END IF;
-        IF NEW.senha IS NULL THEN
-            RAISE EXCEPTION 'A senha do usuário precisa ser preenchida';
-        END IF;
-		
-        IF NEW.cpf IS NULL THEN
-            RAISE EXCEPTION 'O cpf do usuário não pode ser nulo';
-        END IF;
-		
-        IF NEW.email IS NULL THEN
-            RAISE EXCEPTION 'O email do usuário não pode ser nulo';
-        END IF;
-		
-        IF NEW.dt_nascimento IS NULL THEN
-            RAISE EXCEPTION 'a data de nascimento do usuário não pode ser nulo';
-        END IF;
-        --  
-        -- Verifica tamanho da senha e cpf
-        --      
-        IF LENGHT(NEW.senha) < 4 THEN
-            RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
-        END IF;
-		
-		
-        IF LENGTH(NEW.cpf) <> 11 THEN
-            RAISE EXCEPTION 'CPF inválido';
-        END IF;
-    END;
-    ' LANGUAGE plpgsql;
+	CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS $BODY$
+	     BEGIN
+		-- Verificar se foi fornecido o login, senha, email, cpf, data_nascimento foram informados
+		IF NEW.login IS NULL THEN
+		    RAISE EXCEPTION 'O login do usuário não pode ser nulo';
+		END IF;
+		IF NEW.senha IS NULL THEN
+		    RAISE EXCEPTION 'A senha do usuário precisa ser preenchida';
+		END IF;
 
-     CREATE TRIGGER empregados_gatilho BEFORE INSERT OR UPDATE ON usuario
-      FOR EACH ROW EXECUTE PROCEDURE valida_criacao_usuario();
+		IF NEW.cpf IS NULL THEN
+		    RAISE EXCEPTION 'O cpf do usuário não pode ser nulo';
+		END IF;
+
+		IF NEW.email IS NULL THEN
+		    RAISE EXCEPTION 'O email do usuário não pode ser nulo';
+		END IF;
+
+		IF NEW.data_nascimento IS NULL THEN
+		    RAISE EXCEPTION 'a data de nascimento do usuário não pode ser nulo';
+		END IF;
+		--  
+		-- Verifica tamanho da senha e cpf
+		--      
+		IF char_length(NEW.senha) < 4 THEN
+		    RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
+		END IF;
+
+
+		IF char_length(NEW.cpf) <> 11 THEN
+		    RAISE EXCEPTION 'CPF inválido';
+		END IF;
+
+		IF NEW.email NOT LIKE '%@%.%' THEN
+				RAISE EXCEPTION 'Email inválido';
+			END IF;	
+		RETURN NULL;
+   	 END;
+	    $BODY$ LANGUAGE 'plpgsql';
+
+    
+	 CREATE TRIGGER trigger_valida_cadastro
+	  BEFORE INSERT OR UPDATE ON cliente
+	  FOR EACH ROW
+	  EXECUTE PROCEDURE valida_criacao_usuario();
+
         
 <br>
 
