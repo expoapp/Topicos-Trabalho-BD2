@@ -291,8 +291,8 @@ select * from notificacao_exposicao_cliente <br>
     d) resultados em forma de tabela/imagem
   
     [FUNÇÃO CHAMADA QUANDO A EMPRESA DESEJA ALTERAR SUA DESCRIÇÃO POR MEIO DO SITE, LOGADA EM SUA CONTA]
-    CREATE OR REPLACE FUNCTION AlteraEmpresa(procura integer,novo_sobre varchar)
     
+    CREATE OR REPLACE FUNCTION AlteraEmpresa(procura integer,novo_sobre varchar)
     Returns void AS '
     update empresa set sobre = novo_sobre where id = procura;
     ' LANGUAGE SQL;	
