@@ -245,6 +245,34 @@ select * from notificacao_exposicao_cliente <br>
     b) Código do objeto (função/trigger/asserção)
     c) exemplo de dados para aplicação
     d) resultados em forma de tabela/imagem
+  
+    [FUNÇÃO CHAMADA QUANDO A EMPRESA DESEJA ALTERAR SUA DESCRIÇÃO POR MEIO DO SITE, LOGADA EM SUA CONTA]
+    CREATE OR REPLACE FUNCTION AlteraEmpresa(procura integer,novo_sobre varchar)
+    Returns void AS '
+    update empresa set sobre = novo_sobre where id = procura;
+    ' LANGUAGE SQL;	
+    
+    ////////////////////////////////////////////////////////////////////////
+    
+    [FUNÇÃO CHAMADA QUANDO O USUÁRIO DESEJA EDITAR O COMENTÁRIO FEITO]
+    
+    CREATE OR REPLACE FUNCTION AlteraComentario(procura integer,nova_descricao varchar)
+    Returns void AS '
+    update comentario set descricao = nova_descricao where id =procura;
+    ' LANGUAGE SQL;	
+    
+    ////////////////////////////////////////////////////////////////////////
+    
+    [FUNÇÃO CHAMADA QUE RETORNA  EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
+   
+    CREATE OR REPLACE FUNCTION CalculaNotaEmpresa(procura integer)
+    RETURNS SETOF Nota_Exposicao AS $$
+    BEGIN
+    	RETURN QUERY SELECT nota, avg(nota) from Nota_Exposicao
+    	where FK_EXPOSICAO_id = procura;
+    END
+    $$ LANGUAGE 'plpgsql';
+
     
     [TRIIGER PARA VALIDAR O EMAIL]
     CREATE FUNCTION checkValidadeEmail() RETURN TRIGGER AS '
