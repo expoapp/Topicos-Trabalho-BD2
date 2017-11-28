@@ -261,7 +261,7 @@ select * from notificacao_exposicao_cliente <br>
     ' LANGUAGE SQL;	
     
     //////////////////////////////////////////////////////////////////////// 
-    [FUNÇÃO CHAMADA QUE RETORNA  EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
+    [FUNÇÃO QUE RETORNA EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
    
     CREATE OR REPLACE FUNCTION CalculaNotaEmpresa(procura integer)
     RETURNS SETOF Nota_Exposicao AS $$
@@ -271,6 +271,20 @@ select * from notificacao_exposicao_cliente <br>
     END
     $$ LANGUAGE 'plpgsql';
 
+    
+    //////////////////////////////////////////////////////////////////////// 
+	[FUNÇÂO QUE RETORNA UMA TABELA COM OS COMENTÁRIOS FEITOS ENTRE DUAS DATAS ESPECIFICADAS]
+	
+	CREATE OR REPLACE FUNCTION  busca_comentario_data(dia1 TimeStamp, dia2 TimeStamp)
+	RETURNS SETOF comentario AS $$
+	    BEGIN
+		RETURN QUERY SELECT * from comentario
+		where data_cadastro < dia2 AND data_cadastro > dia1;
+	    END
+	$$ LANGUAGE 'plpgsql';
+
+
+	SELECT busca_comentario_data('2017-05-10','2017-06-14');
 
     /////////////////////////////////////////////////////////////////////////
     [TRIGGER PARA VALIDAR CADASTRO DE USUÁRIO]
