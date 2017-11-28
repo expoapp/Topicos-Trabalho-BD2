@@ -175,7 +175,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
     
     select * from bairro limit 10; <br>
 
-![Estado Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Estado.PNG) <br>
+![Estado Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Estados.PNG) <br>
 <br>    
     
     select * from cliente limit 10; <br>
