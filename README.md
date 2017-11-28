@@ -237,6 +237,7 @@ select * from notificacao_exposicao_cliente <br>
 
 ![Notificacao exposicao cliente](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/notificacao_exposicao_cliente.PNG)
 
+
 <br>
 
 #### 9.4	LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
@@ -283,8 +284,9 @@ select * from notificacao_exposicao_cliente <br>
 	    END
 	$$ LANGUAGE 'plpgsql';
 
-
 	SELECT busca_comentario_data('2017-05-10','2017-06-14');
+
+![Função busca_comentario](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/busca_comentario_data.PNG)
 
     /////////////////////////////////////////////////////////////////////////
     [TRIGGER PARA VALIDAR CADASTRO DE USUÁRIO]
