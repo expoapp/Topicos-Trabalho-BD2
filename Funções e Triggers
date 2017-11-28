@@ -1,0 +1,136 @@
+[FUNÇÃO CHAMADA QUANDO A EMPRESA DESEJA ALTERAR SUA DESCRIÇÃO POR MEIO DO SITE, LOGADA EM SUA CONTA]
+
+CREATE OR REPLACE FUNCTION AlteraEmpresa(procura integer,novo_sobre varchar)
+Returns void AS '
+update empresa set sobre = novo_sobre where id = procura;
+' LANGUAGE SQL;	
+
+////////////////////////////////////////////////////////////////////////
+[FUNÇÃO CHAMADA QUANDO O USUÁRIO DESEJA EDITAR O COMENTÁRIO FEITO]
+
+CREATE OR REPLACE FUNCTION AlteraComentario(procura integer,nova_descricao varchar)
+Returns void AS '
+update comentario set descricao = nova_descricao where id =procura;
+' LANGUAGE SQL;	
+
+//////////////////////////////////////////////////////////////////////// 
+[FUNÇÃO QUE RETORNA EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
+
+CREATE OR REPLACE FUNCTION CalculaNotaEmpresa(procura integer)
+RETURNS SETOF Nota_Exposicao AS $$
+BEGIN
+	RETURN QUERY SELECT nota, avg(nota) from Nota_Exposicao
+	where FK_EXPOSICAO_id = procura;
+END
+$$ LANGUAGE 'plpgsql';
+
+
+//////////////////////////////////////////////////////////////////////// 
+[FUNÇÂO QUE RETORNA UMA TABELA COM OS COMENTÁRIOS FEITOS ENTRE DUAS DATAS ESPECIFICADAS]
+
+CREATE OR REPLACE FUNCTION  busca_comentario_data(dia1 TimeStamp, dia2 TimeStamp)
+RETURNS SETOF comentario AS $$
+    BEGIN
+	RETURN QUERY SELECT * from comentario
+	where data_cadastro < dia2 AND data_cadastro > dia1;
+    END
+$$ LANGUAGE 'plpgsql';
+
+SELECT busca_comentario_data('2017-05-10','2017-06-14');
+/////////////////////////////////////////////////////////////////////////
+[TRIGGER PARA VALIDAR CADASTRO DE VISITANTE]
+
+CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS $BODY$
+     BEGIN
+	-- Verificar se foi fornecido o login, senha, email, cpf, data_nascimento foram informados
+	IF NEW.login IS NULL THEN
+	    RAISE EXCEPTION 'O login do usuário não pode ser nulo';
+	END IF;
+	IF NEW.senha IS NULL THEN
+	    RAISE EXCEPTION 'A senha do usuário precisa ser preenchida';
+	END IF;
+
+	IF NEW.cpf IS NULL THEN
+	    RAISE EXCEPTION 'O cpf do usuário não pode ser nulo';
+	END IF;
+
+	IF NEW.email IS NULL THEN
+	    RAISE EXCEPTION 'O email do usuário não pode ser nulo';
+	END IF;
+
+	IF NEW.data_nascimento IS NULL THEN
+	    RAISE EXCEPTION 'a data de nascimento do usuário não pode ser nulo';
+	END IF;
+	--  
+	-- Verifica tamanho da senha e cpf
+	--      
+	IF char_length(NEW.senha) < 3 THEN
+	    RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
+	END IF;
+
+
+	IF char_length(NEW.cpf) <> 11 THEN
+	    RAISE EXCEPTION 'CPF inválido';
+	END IF;
+
+	IF NEW.email NOT LIKE '%@%.%' THEN
+			RAISE EXCEPTION 'Email inválido';
+		END IF;	
+	RETURN NULL;
+ END;
+    $BODY$ LANGUAGE 'plpgsql';
+
+ CREATE TRIGGER trigger_valida_cadastro
+  BEFORE INSERT OR UPDATE ON cliente
+  FOR EACH ROW
+  EXECUTE PROCEDURE valida_criacao_usuario();
+/////////////////////////////////////////////////////////////////////////
+
+ [TRIGGER PARA VALIDAR CADASTRO DE EMPRESA] 
+ 
+
+CREATE FUNCTION valida_criacao_empresa() RETURNS trigger AS $BODY$
+	     BEGIN
+		-- Verificar se foi fornecido o login, senha, email, cpf, data_nascimento foram informados
+		IF NEW.login IS NULL THEN
+		    RAISE EXCEPTION 'O login do usuário não pode ser nulo';
+		END IF;
+		IF NEW.senha IS NULL THEN
+		    RAISE EXCEPTION 'A senha do usuário precisa ser preenchida';
+		END IF;
+
+		IF NEW.cpf IS NULL THEN
+		    RAISE EXCEPTION 'O cpf do usuário não pode ser nulo';
+		END IF;
+
+		IF NEW.email IS NULL THEN
+		    RAISE EXCEPTION 'O email do usuário não pode ser nulo';
+		END IF;
+
+		IF NEW.data_nascimento IS NULL THEN
+		    RAISE EXCEPTION 'a data de nascimento do usuário não pode ser nulo';
+		END IF;
+		--  
+		-- Verifica tamanho da senha e cpf
+		--      
+		IF char_length(NEW.senha) < 3 THEN
+		    RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
+		END IF;
+
+
+		IF char_length(NEW.cnpj) <> 14 THEN
+		    RAISE EXCEPTION 'CPF inválido';
+		END IF;
+
+		IF NEW.email NOT LIKE '%@%.%' THEN
+				RAISE EXCEPTION 'Email inválido';
+			END IF;	
+		RETURN NULL;
+	 END;
+	    $BODY$ LANGUAGE 'plpgsql';
+
+
+	 CREATE TRIGGER trigger_valida_cadastro_empresa
+	  BEFORE INSERT OR UPDATE ON empresa
+	  FOR EACH ROW
+	  EXECUTE PROCEDURE valida_criacao_empresa(); 
