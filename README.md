@@ -2,6 +2,37 @@
 Trabalho desenvolvido durante a disciplina de BD
 drive: https://drive.google.com/drive/folders/0B16vTe2Dzh37WjZ0ZTQ4TVNfeHM
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     O referido projeto poderá ser:
         a) Um novo sistema/projeto 
         b) Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores 
