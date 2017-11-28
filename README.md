@@ -220,18 +220,61 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
         destas características)
     Data de Entrega: (Data a ser definida)
-<br>
+	
+	<br>
+	CREATE VIEW empresa_qtd_seguidores AS (
+	SELECT empresa.nome, COUNT(*) quantidade_seguidores
+	FROM empresa
+	INNER JOIN cliente_empresa
+	on empresa.id = cliente_empresa.fk_empresa_id
+	GROUP BY empresa.id
+	ORDER BY quantidade_seguidores DESC
+	  );
+
 select * from empresa_qtd_seguidores <br>
 
 ![Empresa seguidores](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/empresa_qtd_seguidores.PNG) <br>
+
+	////////////////////////////////////////////////////////////
+
+		CREATE VIEW cidade_qtd_empresas AS (
+	SELECT cidade.nome, COUNT(*) quantidade_empresas
+	from empresa
+	INNER JOIN bairro
+	on empresa.fk_bairro_id = bairro.id
+	INNER JOIN cidade
+	on bairro.fk_cidade_id = cidade.id
+	GROUP BY cidade.id
+	ORDER BY quantidade_empresas    
+	);
 
 select * from cidade_qtd_empresas <br>
 
 ![Cidade empresas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/cidade_qtd_empresas.PNG) <br>
 
+	////////////////////////////////////////////////////////////
+
+	CREATE VIEW historico_notificao_empresa as (
+	SELECT empresa.nome, notificacao.id, notificacao.tipo, notificacao.tipo_origem, notificacao.descricao, notificacao.data_cadastro
+	FROM empresa
+	INNER JOIN notificacao
+	on empresa.id = notificacao.id_origem and notificacao.tipo_origem = 1
+	ORDER BY empresa.nome
+	);
+
 select * from historico_notificao_empresa <br>
 
 ![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/historico_notificao_empresa.PNG) <br>
+
+	////////////////////////////////////////////////////////////
+
+	create view notificacao_exposicao_cliente as (
+	select a.cpf,a.nome,d.descricao Exposicao ,c.descricao Notificacao ,c.data_cadastro from cliente a
+	join cliente_notificacao b on a.id = b.fk_cliente_id
+	join notificacao c on b.fk_notificacao_id = c.id
+	join exposicao d on c.id_origem = d.id and c.tipo_origem = 2
+	order by a.cpf, c.data_cadastro
+	)
 
 select * from notificacao_exposicao_cliente <br>
 
