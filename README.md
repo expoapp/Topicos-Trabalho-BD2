@@ -309,10 +309,11 @@ select * from notificacao_exposicao_cliente <br>
     [FUNÇÃO QUE RETORNA EM FORMA DE TABELA AS NOTAS DE UMA EXPOSIÇÃO E A MÉDIA DESSAS NOTAS]  
    
     CREATE OR REPLACE FUNCTION CalculaNotaEmpresa(procura integer)
-    RETURNS SETOF Nota_Exposicao AS $$
+    RETURNS TABLE(exposicao integer, media numeric) AS $$
     BEGIN
-    	RETURN QUERY SELECT nota, avg(nota) from Nota_Exposicao
-    	where FK_EXPOSICAO_id = procura;
+    	RETURN QUERY SELECT fk_exposicao_id, avg(nota) $nota from nota_exposicao
+		where FK_EXPOSICAO_id = procura
+    	group by fk_exposicao_id;
     END
     $$ LANGUAGE 'plpgsql';
 
