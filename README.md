@@ -298,7 +298,7 @@ select * from notificacao_exposicao_cliente <br>
 		--  
 		-- Verifica tamanho da senha e cpf
 		--      
-		IF char_length(NEW.senha) < 4 THEN
+		IF char_length(NEW.senha) < 3 THEN
 		    RAISE EXCEPTION 'A senha não pode ter menos que 4 dígitos';
 		END IF;
 
