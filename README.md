@@ -138,6 +138,7 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/eventosAppLogico.png?raw=true "Modelo Lógico")<br>
 ### 7	MODELO FÍSICO<br>
+
 ![Modelo Físico](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/CreateExpoApp.sql "Modelo Físico")<br>
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 ![Insert aplicado nas tabelas](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Inserts.sql "Inserts")<br>
@@ -156,6 +157,10 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
+10 mil registros Clientes - 04s
+10 mil registros Empresa - 04s
+100 mil registros Comentario - 10s
+1,5 m registros - 55s
 
 ## Data de Entrega: (18/09/2017)
 
