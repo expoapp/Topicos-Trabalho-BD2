@@ -532,6 +532,8 @@ Data de Entrega: (Data a ser definida)
 
 ### OBSERVAÇÕES IMPORTANTES
 
+	View de historico de comentario, informação desnecessária
+	
 #### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
 1. Caso existam arquivos com conteúdos sigilosos, comunicar o professor que definirá em conjunto com o grupo a melhor forma de armazenamento do arquivo.
 
