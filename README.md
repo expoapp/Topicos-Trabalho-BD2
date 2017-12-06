@@ -531,8 +531,10 @@ Data de Entrega: (Data a ser definida)
     https://guides.github.com/features/mastering-markdown/
 
 ### OBSERVAÇÕES IMPORTANTES
-
+	Apagar os selects escritos a mão
 	View de historico de comentario, informação desnecessária
+	View notificação
+	
 	
 #### Todos os arquivos que fazem parte do projeto (Imagens, pdfs, arquivos fonte, etc..), devem estar presentes no GIT. Os arquivos do projeto vigente não devem ser armazenados em quaisquer outras plataformas.
 1. Caso existam arquivos com conteúdos sigilosos, comunicar o professor que definirá em conjunto com o grupo a melhor forma de armazenamento do arquivo.
