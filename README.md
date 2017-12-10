@@ -57,12 +57,8 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 
 
 #### 5.3 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
-    
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
+
+    Por uma falha na decisão do projeto na tabela de obra, foi optado por não separar a informação da obra referente ao autor da mesma, devida ao fato de que o foco da aplicação são as exposições que possuem aquela obra, não houve uma decisão inicial de guardar informações referentes aos autores.
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
 
