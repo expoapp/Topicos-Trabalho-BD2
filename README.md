@@ -345,7 +345,7 @@ select * from notificacao_exposicao_cliente <br>
 ![Função busca_comentario](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/busca_comentario_data.PNG)
 
     /////////////////////////////////////////////////////////////////////////
-    [TRIGGER PARA VALIDAR CADASTRO DE VISITANTE]
+    [ASSERTION PARA VALIDAR CADASTRO DE VISITANTE]
     
 	CREATE FUNCTION valida_criacao_usuario() RETURNS trigger AS $BODY$
 	     BEGIN
@@ -394,7 +394,7 @@ select * from notificacao_exposicao_cliente <br>
 	  
 /////////////////////////////////////////////////////////////////////////
 
-   	 [TRIGGER PARA VALIDAR CADASTRO DE EMPRESA] 
+   	 [ASSERTION PARA VALIDAR CADASTRO DE EMPRESA] 
 	 
 
 	CREATE FUNCTION valida_criacao_empresa() RETURNS trigger AS $BODY$
@@ -443,6 +443,28 @@ select * from notificacao_exposicao_cliente <br>
 		  FOR EACH ROW
 		  EXECUTE PROCEDURE valida_criacao_empresa();
         
+	///////////////////////////////////////////////
+	[TRIGGER QUE É DISPARADA QUANDO UMA EXPOSIÇÃO É CRIADA, GERANDO
+	AUTOMATICAMENTE UMA NOTIFICAÇÃO QUE AVISARÁ OS SEGUIDORES
+	DAQUELA EMPRESA SOBRE A EXPOSIÇÃO]
+	
+	CREATE OR REPLACE FUNCTION gera_Notificacao_Exposicao()
+	RETURNS TRIGGER AS
+	'
+	BEGIN
+		INSERT INTO
+	    notificacao(data, descricacao, tipo, tipo_origem, id_origem)
+		VALUES(NEW.data_inicio, NEW.descricao, 2, 2, NEW.id);
+	END
+	' LANGUAGE plpgsql;
+	
+	
+	CREATE TRIGGER Ativa_geraNotificaoExposicao
+	AFTER INSERT
+	ON EXPOSICAO
+	FOR EACH ROW
+	EXECUTE PROCEDURE gera_Notificacao_Exposicao();
+
 <br>
 
 #### 9.5	Administração do banco de dados<br>
