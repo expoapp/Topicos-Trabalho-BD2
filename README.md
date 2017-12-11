@@ -445,8 +445,7 @@ select * from notificacao_exposicao_cliente <br>
         
 	///////////////////////////////////////////////
 	[TRIGGER QUE É DISPARADA QUANDO UMA EXPOSIÇÃO É CRIADA, GERANDO
-	AUTOMATICAMENTE UMA NOTIFICAÇÃO QUE AVISARÁ OS SEGUIDORES
-	DAQUELA EMPRESA SOBRE A EXPOSIÇÃO]
+	AUTOMATICAMENTE UMA NOTIFICAÇÃO]
 	
 	CREATE OR REPLACE FUNCTION gera_Notificacao_Exposicao()
 	RETURNS TRIGGER AS
