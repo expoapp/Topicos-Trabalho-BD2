@@ -276,7 +276,7 @@ select * from cidade_qtd_empresas <br>
 select * from historico_notificao_empresa 
 LIMIT 10; <br>
 
-![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/historico_notificao_empresa.PNG) <br>
+![Historico notificacao empresa](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Views/views.PNG) <br>
 
 	////////////////////////////////////////////////////////////
 
