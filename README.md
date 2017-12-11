@@ -266,7 +266,7 @@ select * from cidade_qtd_empresas <br>
 	////////////////////////////////////////////////////////////
 
 	CREATE VIEW historico_notificao_empresa as (
-	SELECT empresa.nome, notificacao.id, notificacao.tipo, notificacao.tipo_origem, notificacao.descricao, notificacao.data_cadastro
+	SELECT empresa.nome,notificacao.descricao, notificacao.data_cadastro
 	FROM empresa
 	INNER JOIN notificacao
 	on empresa.id = notificacao.id_origem and notificacao.tipo_origem = 1
