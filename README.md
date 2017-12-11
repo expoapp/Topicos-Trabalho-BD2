@@ -174,52 +174,51 @@ Para as empresas deverão realizar o cadastro no site informando seu CNPJ, nome,
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
 #### 9.2	SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
-    select * from bairro limit 10; <br>
+   
 
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Bairro.PNG) <br>
 <br>
 
-    select * from cidade limit 10;
 
 ![Cidade Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Cidade.PNG) <br>
     
     
-    select * from bairro limit 10;
+
 
 ![Estado Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Estados.PNG) <br>
 <br>    
     
-    select * from cliente limit 10;
+
 
 ![Cliente Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Cliente.PNG) <br>
 <br>    
     
-    select * from comentario limit 10;
+
 
 ![Comentario Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Comentario.PNG) <br>
 <br>
     
-    select * from empresa limit 10;
+
 
 ![Empresa Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Empresa.PNG) <br>
 <br>
     
-    select * from exposicao limit 10;
+
 
 ![Exposicao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Exposicao.PNG) <br>
 <br>
     
-    select * from exposicao_temp limit 10;
+
 
 ![Exposicao_temp Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Exposicao_temporaria.PNG) <br>
 <br>
     
-    select * from notificacao limit 10;
+ 
 
 ![Notificacao Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Notificação.PNG) <br>
 <br>
     
-    select * from peca limit 10; 
+
 
 ![Peca Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/Peça.PNG) <br>
 <br>
