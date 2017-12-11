@@ -488,6 +488,10 @@ Data de Entrega: (Data a ser definida)
     c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices.
 ![Indices](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Indeces.sql
  "Indices")
+ 
+ ![Indices]( https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/25181947_1507722225943050_173383548_n.jpg)
+ 
+
     
 <br>
     Data de Entrega: (Data a ser definida)
