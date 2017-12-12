@@ -512,18 +512,25 @@ Data de Entrega: (Data a ser definida)
  
  ![Indices]( https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/25181947_1507722225943050_173383548_n.jpg)
  
+ 	NotificacaoEmpresaClienteComIndice
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaClienteComIndice.PNG) <br>
 
+	NotificacaoEmpresaClienteSemIndice
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaClienteSemIndice.PNG) <br>
 
+	NotificacaoEmpresaData.SemIndx
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaData.SemIndx.PNG) <br>
 
+	NotificacaoEmpresaDataComIndx
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaDataComIndx.PNG) <br>
 
+	NotificacaoEmpresaDataSemIndx
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaDataSemIndx.PNG) <br>
 
+	selectEmpresaComIndice
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/selectEmpresaComIndice.PNG) <br>
 
+	selectEmpresaSemIndice
 ![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/selectEmpresaSemIndice.PNG) <br>
     
 <br>
