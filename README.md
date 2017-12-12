@@ -512,7 +512,19 @@ Data de Entrega: (Data a ser definida)
  
  ![Indices]( https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/25181947_1507722225943050_173383548_n.jpg)
  
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaClienteComIndice.PNG) <br>
 
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaClienteSemIndice.PNG) <br>
+
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaData.SemIndx.PNG) <br>
+
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaDataComIndx.PNG) <br>
+
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/NotificacaoEmpresaDataSemIndx.PNG) <br>
+
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/selectEmpresaComIndice.PNG) <br>
+
+![Bairro Limit10](https://github.com/expoapp/Trabalho-BD2-ExpoApp/blob/master/Imagens/Modelos/selectEmpresaSemIndice.PNG) <br>
     
 <br>
     Data de Entrega: (Data a ser definida)
